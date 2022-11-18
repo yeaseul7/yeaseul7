@@ -1,7 +1,7 @@
 ## yeaseul의 Git 😊
 
 
-
+go to blog[ ](https://velog.io/@yeaseul7)
 
 
 <!--
