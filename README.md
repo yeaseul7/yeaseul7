@@ -1,4 +1,4 @@
-### yeaseul의 Git![image](https://user-images.githubusercontent.com/104067367/202669128-289f25f9-3f47-4b55-9dee-51f5729779a1.png){: width: "100" height="100"}
+### yeaseul의 Git![image](https://user-images.githubusercontent.com/104067367/202669128-289f25f9-3f47-4b55-9dee-51f5729779a1.png){: width: "20%" height="20%"}
 
 
 <!--
