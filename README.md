@@ -1,4 +1,5 @@
-### Hi there 👋
+### yeaseul의 Git![image](https://user-images.githubusercontent.com/104067367/202669128-289f25f9-3f47-4b55-9dee-51f5729779a1.png)
+
 
 <!--
 **yeaseul7/yeaseul7** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
