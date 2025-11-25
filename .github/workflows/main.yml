@@ -51,3 +51,16 @@ jobs:
           # Isocalendar 플러그인 활성화
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year # 표시 기간 (half-year 또는 full-year)
+
+          # -----------------------------------------------------
+      # 4. Recently Starred (Metrics) - [추가된 부분]
+      # -----------------------------------------------------
+      - name: Recently Starred
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.stars.svg
+          # 토큰 이름을 통일했습니다 (기존에 쓰시던 README_TOKEN 사용)
+          token: ${{ secrets.README_TOKEN }}
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 3
