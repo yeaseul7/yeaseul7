@@ -5,20 +5,49 @@ on:
     - cron: "0 18 * * *"
   workflow_dispatch:
 
+# 1. 권한 설정 추가 (403 오류 해결을 위해 필수)
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v3
+
+      # -----------------------------------------------------
+      # 2. 기존: 3D Contribution Profile 생성
+      # -----------------------------------------------------
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.README_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-      - name: Commit & Push
+
+      # 3. 3D 프로필 파일 커밋 & 푸시 (수동 푸시 필요)
+      - name: Commit & Push 3D Profile
         run: |
           git config user.name yeaseul7
           git config user.email cutie32769@gmail.com
           git add -A .
-          git commit -m "generated"
+          # 변동 사항이 있을 때만 커밋하도록 설정 (오류 방지)
+          git diff --staged --quiet || git commit -m "generated 3d profile"
           git push
+
+      # -----------------------------------------------------
+      # 4. 추가: Isometric Commit Calendar (Metrics)
+      # -----------------------------------------------------
+      - name: Isometric Commit Calendar
+        uses: lowlighter/metrics@latest
+        with:
+          # 파일이 저장될 이름
+          filename: isometric-calendar.svg
+          # GitHub Token (기존에 쓰시던 토큰 사용)
+          token: ${{ secrets.README_TOKEN }}
+          
+          # 기본 설정 (헤더 등 불필요한 정보 숨기기)
+          base: ""
+          
+          # Isocalendar 플러그인 활성화
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year # 표시 기간 (half-year 또는 full-year)
