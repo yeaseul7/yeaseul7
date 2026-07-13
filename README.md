@@ -35,8 +35,14 @@
 
 <img src="metrics.plugin.stars.svg" alt="Recently starred" width="92%" />
 
-<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=yeaseul7&utm_content=line">
-  <img src="https://render.gitanimals.org/lines/yeaseul7?pet-id=780958626600620829&bg_color=transparent" alt="GitAnimals" width="600" height="120" />
+
+<a href="https://www.gitanimals.org/en-US?utm_medium=image&utm_source=yeaseul7&utm_content=line">
+  <img
+    src="https://render.gitanimals.org/lines/yeaseul7?pet-id=847471224735540406"
+    width="600"
+    height="120"
+  />
 </a>
+  
 
 </div>
